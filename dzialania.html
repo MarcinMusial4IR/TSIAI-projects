@@ -12,24 +12,44 @@
         let znak = prompt("Podaj znak działania: ");
         let b = parseInt(prompt("Podaj drugą liczbę: "));
 
-        if (znak==='+') {
-            wynik = a + b;
+        switch (znak) {
+            case '+':
+                wynik = a + b;
+                break;
+            case '-':
+                wynik = a - b;
+                break;
+            case '*':
+                wynik = a * b;
+                break;
+            case '/':
+                wynik = a / b;
+                break;
+            default:
+                alert ("Nieprawidłowy znak");
         }
-        else if (znak==='-') {
-            wynik = a - b;
-        }
-        else if (znak==='*') {
-            wynik = a * b;
-        }
-        else if (znak==='/') {
-            wynik = a / b;
-        }
-        else {
-            alert("Nieprawidłowy znak");
-        }
-        alert("Wynik: " + wynik);
-        //document.write("Wynik: " + parseFloat(a)+parseFloat(b));
+        
+        alert ("Wynik: " + wynik);
+        //document.write("Wynik: " + wynik);
 
+
+
+        // if (znak==='+') {
+        //    wynik = a + b;
+        // }
+        // else if (znak==='-') {
+        //    wynik = a - b;
+        // }
+        // else if (znak==='*') {
+        //    wynik = a * b;
+        // }
+        // else if (znak==='/') {
+        //    wynik = a / b;
+        // }
+        // else {
+        //    alert("Nieprawidłowy znak");
+        // }
+        
     </script>
 </body>
 </html>
