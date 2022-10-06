@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: lightcoral;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let a;
+        let znak;
+        let name;
+        let wynik;
+
+        name = prompt("Podaj swoje imię: ");
+
+        while(isNaN(a)) {
+            a = parseInt(prompt("Podaj liczbę: "));
+        }
+
+        znak = prompt("Podaj znak działania: ");
+
+        function calculate(a, znak, b=10) {
+            switch (znak) {
+            case '+':
+                wynik = a + b;
+                break;
+            case '-':
+                wynik =  a - b;
+                break;
+            case '*':
+                wynik =  a * b;
+                break;
+            case '/':
+                wynik =  a / b;
+                break;
+            default:
+                alert ("Nieprawidłowy znak");
+            }
+            return wynik;
+        }
+        
+        function printOut(a, b) {
+            document.write(`<p>Witaj ${a}, wynik tego działania to ${b}.</p>`);
+        }
+
+        wynik = calculate(a, znak);
+        printOut(name, wynik);
+    </script>
+</body>
+</html>
