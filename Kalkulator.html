@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-size: 50px;
+            color: lightcoral;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let a;
+        let b;
+        let znak;
+
+        while(isNaN(a)) {
+            a = parseInt(prompt("Podaj pierwszą liczbę: "));
+        }
+
+        znak = prompt("Podaj znak działania: ");
+
+        while(isNaN(b)) {
+            b = parseInt(prompt("Podaj drugą liczbę: "));
+        }
+
+        function calculate(a, znak, b) {
+            switch (znak) {
+            case '+':
+                wynik = a + b;
+                break;
+            case '-':
+                wynik =  a - b;
+                break;
+            case '*':
+                wynik =  a * b;
+                break;
+            case '/':
+                wynik =  a / b;
+                break;
+            default:
+                alert ("Nieprawidłowy znak");
+            }
+            return wynik;
+        }
+        
+        document.write ("Wynik: " + calculate(a, znak, b));
+        alert ("Wynik: " + calculate(a, znak, b));
+
+
+        // zasięg zmiennych
+        
+        // if (znak==='+') {
+        //    wynik = a + b;
+        // }
+        // else if (znak==='-') {
+        //    wynik = a - b;
+        // }
+        // else if (znak==='*') {
+        //    wynik = a * b;
+        // }
+        // else if (znak==='/') {
+        //    wynik = a / b;
+        // }
+        // else {
+        //    alert("Nieprawidłowy znak");
+        // }
+        
+    </script>
+</body>
+</html>
