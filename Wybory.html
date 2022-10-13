@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybory</title>
+    <style>
+        body {
+            font-size: 20px;
+            color: lightcoral;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let name;
+        let age;
+
+        name = prompt("Jak masz na imię?");
+
+        while(isNaN(age)) {
+            age = parseInt(prompt("Ile masz lat?"));
+        }
+
+        function hasVotingRights (userName, userAge) {
+            if (userAge >= 30) {
+                info = "możesz głosować i startować jako kandydat na prezydenta";
+            }
+            else if (userAge >= 21) {
+                info = "możesz głosować i startować jako kandydat na posła";
+            }
+            else if (userAge >= 18) {
+                info = "możesz głosować";
+            }
+            else {
+                info = "nie masz praw wyborczych";
+            }
+
+            return `Cześć ${userName}, ${info}.`;
+        }
+
+        document.write(hasVotingRights(name, age));
+
+    </script>
+</body>
+</html>

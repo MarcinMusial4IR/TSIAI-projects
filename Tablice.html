@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+    <style>
+        body {
+            font-size: 20px;
+            color: lightcoral;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+        let length;
+        const arr = [];
+
+        while (isNaN(length)) {
+            length = parseInt(prompt("Podaj długość tablicy: "));
+        }
+
+        for (let i = 0; i < length; i++) {
+                arr.push(parseInt(prompt(`Podaj ${i+1}. liczbę: `)));
+        }
+
+        for (let i = 0; i < length; i++) {
+            document.write(`${i+1}. liczba w tablicy: <b>${arr[i]}</b><br>`);
+        }
+
+    </script>
+</body>
+</html>
